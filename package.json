@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "events": "^3.3.0",
+    "fs": "^0.0.1-security",
     "lodash": "^4.17.21",
     "moment": "^2.29.4"
   }
