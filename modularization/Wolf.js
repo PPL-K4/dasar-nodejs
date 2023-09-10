@@ -9,5 +9,5 @@ class Wolf {
 }
 
 
-
+//TODO 2 -> untuk export class wolf
 module.exports = Wolf;

@@ -9,5 +9,5 @@ class Tiger {
 }
 
 
-
+//TODO 1 -> untuk export class tiger
 module.exports = Tiger;

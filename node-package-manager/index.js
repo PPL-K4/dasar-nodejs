@@ -1,4 +1,4 @@
-const _ = require ('lodash');
+const _ = require ('lodash'); /*TODO -> Memanggil package lodash*/
 
 const myOddEvenArray = _.partition ([1,2,3,4,5,6], (n) => n%2);
 

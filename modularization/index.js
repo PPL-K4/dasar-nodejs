@@ -1,5 +1,5 @@
-const Tiger = require ('./tiger');
-const Wolf = require ('./wolf');
+const Tiger = require ('./tiger'); /*TODO 3 -> impor class tiger*/
+const Wolf = require ('./wolf'); /*TODO 4 -> impor class wolf*/
 
 const fighting = (tiger, wolf) => {
 	if (tiger.strength > wolf.strength) {
