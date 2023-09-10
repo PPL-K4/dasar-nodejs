@@ -8,21 +8,30 @@ const readableStream = fs.createReadStream('./input.txt', {
 	highWaterMark: 29
 });
 
-readableStream.on ('readable', () => {
+const writableStream = fs.createWriteStream('output.txt');
+
+readableStream.pipe(writableStream);
+
+readableStream.on ('data', (chunk) => {
 	try {
-		process.stdout.write(`[${readableStream.read()}]`);
+		process.stdout.write(`[${chunk}]`);
 	} catch(error) {
+		console.error(error);
 		//catch the error when the cunk cannot be read.
 	}
 
 });
 
 readableStream.on ('end',() => {
-	console.log('Done');
+	console.log('\nDone');
 });
 
-const writableStream = fs.createWriteStream('output.txt');
 
-writableStream.write('input.txt\n');
-writableStream.write('input.txt\n');
-writableStream.end('done');
+
+writableStream.on('finish', () =>{
+	console.log('\nfile output telah dibuat.');
+});
+
+writableStream.on('error', (error) =>{
+	console.log('file gagal dibuat.', error);
+});
