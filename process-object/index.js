@@ -9,5 +9,5 @@ for(let i=0; i<=10000; i++) {
 const currentMemoryUsage = process.memoryUsage();
 
 console.log(`Hai, ${yourName}`);
-console.log(`Mode Environtment: ${initialMemoryUsage}`);
-console.log(`Pengguna memory dari ${initialMemoryUsage} naik ke ${currentMemoryUsage}`);
+console.log(`Mode Environtment: ${environment}`);
+console.log(`Pengguna memory dari ${initialMemoryUsage.heapUsed} naik ke ${currentMemoryUsage.heapUsed}`);
